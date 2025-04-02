@@ -14,8 +14,6 @@ def setup_logging():
 
 	logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s %(message)s")
 
-
-
 class LLMSettings(BaseModel):
 	"""LLM Configuration Settings"""
 
@@ -52,6 +50,7 @@ class Settings(BaseModel):
 @lru_cache
 def get_settings() -> Settings:
 	"""Creating and returning cached instance of settings"""
+	
 	settings = Settings()
 	setup_logging()
 	return settings

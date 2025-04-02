@@ -1,4 +1,4 @@
-# Building a High-Performance RAG Solution with Pgvectorscale and Python
+# High-Performance RAG Solution with Pgvectorscale and Python
 
 This project is to set-up and use `pgvectorscale` with Docker and Python, leveraging OpenAI's powerful `text-embedding-3-small` model for embeddings to build a cutting-edge RAG (Retrieval-Augmented Generation) solution, combining advanced retrieval techniques (including hybrid search) with intelligent answer generation based on the retrieved context.
 
