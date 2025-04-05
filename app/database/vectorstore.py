@@ -77,7 +77,7 @@ class VectorStore:
 		"""Function to search for relavant embeddings similar to input query."""
 
 		# Creating embedding for input query_text
-		query_embedding = self.get_embeddings(query_text)
+		query_embedding = self.get_embedding(query_text)
 
 		# Creating a map to store search parameters
 		search_params = {
@@ -110,7 +110,7 @@ class VectorStore:
 		"""Function to create dataframe from fetched search results."""
 
 		# Creating table with necessary column names
-		results_df = pd.DataFrame(results, columns=['id', 'metadata', 'contents', 'embedding', 'distance'])
+		results_df = pd.DataFrame(results, columns=['id', 'metadata', 'content', 'embedding', 'distance'])
 
 		# Exploding metadata column and combining
 		results_df = pd.concat([results_df.drop('metadata', axis=1), results_df['metadata'].apply(pd.Series)], axis=1)
